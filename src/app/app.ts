@@ -5,7 +5,6 @@ import { ProductoLista } from "./producto-lista/producto-lista";
   selector: 'app-root',
   imports: [ProductoLista],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('inventario-app');

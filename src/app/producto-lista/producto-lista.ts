@@ -2,9 +2,10 @@ import { Component, inject } from '@angular/core';
 import { Producto } from '../producto';
 import { ProductoService } from '../producto-service';
 
+
 @Component({
   selector: 'app-producto-lista',
-  imports: [],
+  imports:[],
   templateUrl: './producto-lista.html',
 })
 export class ProductoLista {

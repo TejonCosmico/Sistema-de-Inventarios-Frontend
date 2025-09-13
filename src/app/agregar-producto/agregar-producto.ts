@@ -23,10 +23,10 @@ export class AgregarProducto {
     this.productoServicio.agregarProducto(this.producto).subscribe(
       (datos) => {
           this.irListaProductos();
-        },
-        (error) => {
+      },
+      (error) => {
           console.error("Error al agregar producto", error);
-        }
+      }
     )
   }
 

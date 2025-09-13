@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Producto } from '../producto';
 import { ProductoService } from '../producto-service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class ProductoLista {
 
   private productoServicio = inject(ProductoService);
   private cdRef = inject(ChangeDetectorRef);
+  private enrutador = inject(Router);
 
   ngOnInit() {
     this.obtenerProductos();
@@ -27,5 +29,9 @@ export class ProductoLista {
           console.error("Error al obtener productos", error);
         }
     );
+  }
+
+  editarProducto(id: number) {
+    this.enrutador.navigate(['editar-producto', id]);
   }
 }

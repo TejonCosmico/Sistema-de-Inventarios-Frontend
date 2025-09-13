@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-producto-lista',
   templateUrl: './producto-lista.html',
+  styleUrl: './producto-lista.css'
 })
 export class ProductoLista {
   productos!: Producto[];
